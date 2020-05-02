@@ -1,0 +1,32 @@
+.list {
+    list-style-type: none;
+}
+
+.list__item {
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.list__item:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.list__link {
+    color: black;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.list__link:hover {
+    color: #ccc;
+}

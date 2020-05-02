@@ -1,0 +1,112 @@
+.form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form__group {
+    width: 100%;
+    text-align: left;
+}
+
+.form__input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    outline: none;
+    width: 100%;
+    background-color: transparent !important;
+    -webkit-appearance: none;
+    resize: vertical;
+}
+
+.form__input::placeholder {
+    color: #ccc;
+}
+
+.form__btn {
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form__btn:hover {
+    background-color: #ccc;
+    border: 1px solid black;
+}
+
+.form__buttons {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form__buttons__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form__textarea {
+    height: 150px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form__select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    -webkit-appearance: none;
+    margin-bottom: 1rem;
+}
+
+.form__label {
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+    width: 100%;
+    text-transform: uppercase;
+    display: block;
+}
+
+.form__label--required::after {
+    content: "* påkrævet";
+    color: darkred;
+    margin-left: 0.5rem;
+    font-size: 10px;
+}
+
+.form__textarea::placeholder {
+    color: #ccc;
+}
+
+.form__buttons {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 421px) {
+    .form__input {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .form__buttons {
+        flex-direction: row;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    .form__buttons__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,23 @@
+.alert {
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.alert--success {
+    border-left: 5px solid #388E3C;
+    background-color: #8BC34A;
+    color: white;
+}
+
+.alert--error {
+    border-left: 5px solid #D32F2F;
+    background-color: #F44336;
+    color: white;
+}
+
+.alert--primary {
+    border-left: 5px solid #1976D2;
+    background-color: #03A9F4;
+    color: white;
+}

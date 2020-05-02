@@ -1,0 +1,60 @@
+.btn {
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    line-height: 2;
+    position: relative;
+    text-decoration: none;
+}
+
+.btn--plain {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.btn--white {
+    background-color: white;
+}
+
+.btn--primary {
+    background-color: #eee;
+    color: black !important;
+}
+
+.btn--success {
+    background-color: #388E3C;
+    color: white !important;
+}
+
+.btn--error {
+    background-color: #F44336;
+    color: white !important;
+}
+
+.btn--primary:hover {
+    background-color: #ccc;
+}
+
+.btn--small {
+    padding: 5px 15px 2px !important;
+    font-size: 10px !important;
+}
+
+.btn:disabled {
+    background-color: #eee;
+    color: #333;
+    cursor: not-allowed;
+}
+
+.btn > .fa {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}

@@ -1,0 +1,87 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow-y: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal__content {
+    z-index: 999;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.modal__content--down {
+    bottom: -40px;
+    top: auto;
+}
+
+.modal__content--down::after {
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+}
+
+/* The Close Button */
+.modal__close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .modal {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .modal__content {
+        width: 90%;
+    }
+}
+
+@media screen and (min-height: 500px) {
+    .modal__content {
+        height: auto;
+        max-height: 90%;
+    }
+}
+
+@media screen and (min-height: 700px) {
+    .modal__content {
+        height: auto;
+        max-height: 80%;
+    }
+}

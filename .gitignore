@@ -1,0 +1,5 @@
+/server/.env
+/server/node_modules
+/server/uploads
+/client/node_modules
+/.idea

@@ -1,0 +1,9 @@
+.avatar {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+.avatar__container {
+    position: relative;
+}

@@ -1,0 +1,16 @@
+.form-errors {
+    padding: 1rem 2rem;
+    border: darkred;
+    background-color: pink;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-errors__title {
+    font-size: 14px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 1rem;
+}

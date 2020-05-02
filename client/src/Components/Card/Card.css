@@ -1,0 +1,14 @@
+.card {
+    padding: 1rem;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    position: relative;
+}
+
+.card__collapse {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}

@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.pagination li {
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.pagination li a {
+    outline: none;
+}
+
+.pagination li:last-child {
+    margin-right: 0;
+}
+
+.pagination .disabled {
+    cursor: not-allowed;
+}
+
+.pagination .active {
+    font-weight: bold;
+    background-color: #ccc;
+}
