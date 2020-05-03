@@ -18,11 +18,11 @@ export default function () {
         let _errors = [];
         setErrors([]);
 
-        if (!name) _errors.push("Name is required");
-        if (!email) _errors.push("Email is required");
+        if (!name.trim()) _errors.push("Name is required");
+        if (!email.trim()) _errors.push("Email is required");
         else if (!validator.isEmail(email)) _errors.push("Email must be in correct format");
-        if (!password) _errors.push("Password is required");
-        if (!passwordAgain) _errors.push("Password confirmation is required");
+        if (!password.trim()) _errors.push("Password is required");
+        if (!passwordAgain.trim()) _errors.push("Password confirmation is required");
         else if (password !== passwordAgain) _errors.push("Passwords must match");
         if (_errors.length) return setErrors(_errors);
 
