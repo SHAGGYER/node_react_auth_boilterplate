@@ -4,6 +4,7 @@ import "./Navbar.css";
 import AppContext from "../../Contexts/AppContext";
 import AccountSubmenu from "./AccountSubmenu/AccountSubmenu";
 import Submenu from "./Submenu/Submenu";
+import config from "../../../config";
 
 const Navbar = ({isAdmin}) => {
     const history = useHistory();
@@ -16,7 +17,7 @@ const Navbar = ({isAdmin}) => {
 
     return (
         <nav className="navbar">
-            <div className="navbar__logo">Socialic</div>
+            <div className="navbar__logo">{config.APP_NAME}</div>
             <ul className="navbar__list">
                 <AccountSubmenu/>
             </ul>
