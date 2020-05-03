@@ -18,12 +18,12 @@ export default function Register() {
         let _errors = [];
         setErrors([]);
 
-        if (!name) _errors.push("Navn er påkrævet");
-        if (!email) _errors.push("Email er påkrævet");
-        else if (!validator.isEmail(email)) _errors.push("Email skal have korrekt format");
-        if (!password) _errors.push("Kodeord er påkrævet");
-        if (!passwordAgain) _errors.push("Kodeord bekræftelse er påkrævet");
-        else if (password !== passwordAgain) _errors.push("Kodeord skal være ens");
+        if (!name) _errors.push("Name is required");
+        if (!email) _errors.push("Email is required");
+        else if (!validator.isEmail(email)) _errors.push("Email must be in correct format");
+        if (!password) _errors.push("Password is required");
+        if (!passwordAgain) _errors.push("Password confirmation is required");
+        else if (password !== passwordAgain) _errors.push("Passwords must match");
         if (_errors.length) return setErrors(_errors);
 
         try {
@@ -48,7 +48,7 @@ export default function Register() {
             <form onSubmit={onSubmit}>
                 {!!errors.length && <FormErrors errors={errors}/>}
                 <div className="form__group mb-1">
-                    <label className="form__label">Navn</label>
+                    <label className="form__label">Name</label>
                     <input className="form__input" value={name}
                            onChange={e => setName(e.target.value)}/>
                 </div>
@@ -58,14 +58,14 @@ export default function Register() {
                            onChange={e => setEmail(e.target.value)}/>
                 </div>
                 <div className="form__group mb-1">
-                    <label className="form__label">Kodeord</label>
+                    <label className="form__label">Password</label>
                     <input className="form__input"
                            type="password"
                            value={password}
                            onChange={e => setPassword(e.target.value)}/>
                 </div>
                 <div className="form__group mb-1">
-                    <label className="form__label">Kodeord Igen</label>
+                    <label className="form__label">Password Again</label>
                     <input className="form__input"
                            type="password"
                            value={passwordAgain}
@@ -73,12 +73,12 @@ export default function Register() {
                 </div>
                 <div className="form__buttons">
                     <div className="form__buttons__left">
-                        <Button className="btn--primary" type="submit">Registrér</Button>
+                        <Button className="btn--primary" type="submit">Register</Button>
                     </div>
                     <div>
-                        <Link to="/auth/forgot-password" className="text--white">Glemt Kodeord?</Link>
+                        <Link to="/auth/forgot-password">Forgot Password?</Link>
                         <span> | </span>
-                        <Link to="/auth/login" className="text--white">Log Ind</Link>
+                        <Link to="/auth/login">Login</Link>
                     </div>
                 </div>
             </form>
