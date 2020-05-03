@@ -17,7 +17,7 @@ export default function () {
         setInfo(null);
         let _errors = [];
 
-        if (!email) _errors.push("Email is required");
+        if (!email.trim()) _errors.push("Email is required");
         else if (!validator.isEmail(email)) _errors.push("Wrong email format");
 
         if (_errors.length) return setErrors(_errors);

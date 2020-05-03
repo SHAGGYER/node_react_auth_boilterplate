@@ -42,8 +42,8 @@ const ResetPassword = ({location}) => {
         setErrors([]);
         let _errors = [];
 
-        if (!password) _errors.push("Password is required");
-        if (!passwordAgain) _errors.push("Password confirmation is required");
+        if (!password.trim()) _errors.push("Password is required");
+        if (!passwordAgain.trim()) _errors.push("Password confirmation is required");
         else if (password !== passwordAgain) _errors.push("Passwords must match");
 
         if (_errors.length) return setErrors(_errors);

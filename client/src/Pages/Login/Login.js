@@ -16,8 +16,8 @@ export default function Login() {
         let _errors = [];
         setErrors([]);
 
-        if (!email) _errors.push("Email is required");
-        if (!password) _errors.push("Password is required");
+        if (!email.trim()) _errors.push("Email is required");
+        if (!password.trim()) _errors.push("Password is required");
 
         if (_errors.length) {
             setErrors(_errors);
