@@ -4,7 +4,7 @@ import "./Navbar.css";
 import AppContext from "../../Contexts/AppContext";
 import AccountSubmenu from "./AccountSubmenu/AccountSubmenu";
 import Submenu from "./Submenu/Submenu";
-import config from "../../../config";
+import config from "../../config";
 
 const Navbar = ({isAdmin}) => {
     const history = useHistory();
