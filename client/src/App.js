@@ -27,7 +27,6 @@ import Install from "./Pages/Install/Install";
 import Error400 from "./Pages/Errors/400/Error400";
 import Error401 from "./Pages/Errors/401/Error401";
 import Error500 from "./Pages/Errors/500/Error500";
-import Profile from "./Pages/Profile/Profile";
 
 const App = ({location}) => {
     const [user, setUser] = useState(null);

@@ -13,7 +13,7 @@ router.get("/init", async (req, res) => {
     }
     const user = await User.findById(req.userId);
 
-    res.send({user, notifications, installed});
+    res.send({user, installed});
 });
 
 router.post("/send-verification-token", async (req, res) => {
