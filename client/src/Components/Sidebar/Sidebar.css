@@ -1,0 +1,84 @@
+.side-drawer {
+    height: 100%;
+    background: var(--primary-color);
+    top: 0;
+    left: 0;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: white;
+}
+
+.sidebar__account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 16px;
+}
+
+.sidebar__profile-link {
+    font-size: 14px;
+    text-decoration: underline;
+    color: white;
+}
+
+.sidebar__account-img {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 1rem;
+}
+
+.sidebar__account-name {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.sidebar__nav {
+    padding: 0 1rem 2rem;
+    list-style-type: none;
+}
+
+.sidebar__nav-item {
+
+}
+
+.sidebar__nav-link {
+    line-height: 2.5;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.sidebar__nav-link:hover {
+    color: #ccc;
+}
+
+.sidebar__bottom {
+    background-color: var(--tertiary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Spartan ExtraLight", sans-serif;
+}
+
+.sidebar__bottom:hover {
+    background-color: var(--secondary-color);
+}
+
+.sidebar__submenu {
+    display: none;
+    padding-left: 1rem;
+    list-style-type: none;
+}
+
+.sidebar__submenu--active {
+    display: flex;
+    flex-direction: column;
+}
