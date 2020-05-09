@@ -4,25 +4,26 @@ import FormErrors from "../../Components/FormErrors/FormErrors";
 import HttpClient from "../../Services/HttpClient";
 import "./Login.css";
 import Button from "../../Components/Button/Button";
+import validator from "validator";
+import Input from "../../Components/Input/Input";
+import Alert from "../../Components/Alert/Alert";
 
 export default function Login() {
     const history = useHistory();
-    const [errors, setErrors] = useState([]);
+    const [error, setError] = useState([]);
+    const [generalError, setGeneralError] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const onSubmit = async event => {
         event.preventDefault();
-        let _errors = [];
-        setErrors([]);
+        let _error = {};
+        setError({});
 
-        if (!email.trim()) _errors.push("Email is required");
-        if (!password.trim()) _errors.push("Password is required");
-
-        if (_errors.length) {
-            setErrors(_errors);
-            return;
-        }
+        if (!email.trim()) _error.email = "Email is required";
+        else if (!validator.isEmail(email)) _error.email = "Email must be in correct format";
+        if (!password) _error.password = "Password is required";
+        if (Object.keys(_error).length) return setError(_error);
 
         try {
             const data = {
@@ -34,7 +35,7 @@ export default function Login() {
             localStorage.setItem("token", response.data.token);
             window.location = "/";
         } catch (e) {
-            setErrors([e.response.data.message]);
+            setGeneralError(e.response.data.message);
         }
     };
 
@@ -42,20 +43,13 @@ export default function Login() {
         <div className="page">
             <h1 className="page__title">Login</h1>
             <form onSubmit={onSubmit}>
-                {errors.length ? <FormErrors errors={errors}/> : null}
+                {!!generalError.length && <Alert type="error">{generalError}</Alert>}
                 <div className="form__group mb-1">
-                    <label className="form__label">Email</label>
-                    <input className="form__input"
-                           value={email}
-                           onChange={e => setEmail(e.target.value)}
-                           type="text"/>
+                    <Input onChange={e => setEmail(e.target.value)} value={email} label="Email" error={error.email}/>
                 </div>
                 <div className="form__group mb-1">
-                    <label className="form__label">Password</label>
-                    <input className="form__input"
-                           value={password}
-                           onChange={e => setPassword(e.target.value)}
-                           type="password"/>
+                    <Input type="password" onChange={e => setPassword(e.target.value)} value={password} label="Password"
+                           error={error.password}/>
                 </div>
 
                 <div className="form__buttons">
