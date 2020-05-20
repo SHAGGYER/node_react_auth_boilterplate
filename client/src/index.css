@@ -1,6 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css');
 
+:root {
+    --primary-color: var(--teal-primary);
+    --secondary-color: var(--teal-accent);
+    --accent-color: var(--pink-primary);
+
+    --blue-primary: #2196F3;
+    --blue-dark: #1976D2;
+    --blue-light: #BBDEFB;
+    --blue-accent: #448AFF;
+
+    --green-primary: #4caf50;
+    --green-dark: #388E3C;
+    --green-light: #C8E6C9;
+    --green-accent: #4CAF50;
+
+    --red-primary: #F44336;
+    --red-dark: #D32F2F;
+    --red-light: #FFCDD2;
+    --red-accent: #FF5252;
+
+    --orange-primary: #FF9800;
+    --orange-dark: #F57C00;
+    --orange-light: #FFE0B2;
+    --orange-accent: var(--orange-primary);
+
+    --blue-grey-primary: #607D8B;
+    --blue-grey-dark: #455A64;
+    --blue-grey-light: #CFD8DC;
+    --blue-grey-accent: var(--blue-grey-primary);
+
+    --pink-primary: #FF4081;
+    --pink-dark: #C2185B;
+    --pink-light: #F8BBD0;
+    --pink-accent: #FF4081;
+
+    --teal-primary: #009688;
+    --teal-dark: #00796B;
+    --teal-light: #B2DFDB;
+    --teal-accent: #009688;
+
+    --yellow-primary: #FFEB3B;
+    --yellow-dark: #FBC02D;
+    --yellow-light: #FFF9C4;
+    --yellow-accent: var(--yellow-primary);
+
+    --purple-primary: #9C27B0;
+    --purple-dark: #7B1FA2;
+    --purple-light: #E1BEE7;
+    --purple-accent: #7C4DFF;
+
+    --primary-text: #212121;
+    --secondary-text: #757575;
+    --divider: #BDBDBD;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -20,6 +75,9 @@ body {
     height: 100%;
 }
 
+.transition {
+    transition: all 0.3s ease-in-out;
+}
 
 .position--relative {
     position: relative;
@@ -27,7 +85,7 @@ body {
 
 .line {
     margin: 1rem 0;
-    background-color: #ccc;
+    background: #ccc;
     height: 1px;
     border: none;
 }

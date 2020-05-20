@@ -1,3 +1,4 @@
+
 .form {
     width: 60%;
     margin: 0 auto;
@@ -8,15 +9,30 @@
     text-align: left;
 }
 
+.form__error {
+    color: #F44336;
+    margin-top: 0.5rem;
+    font-size: 12px;
+}
+
+.form__label--error {
+    color: #F44336 !important;
+}
+
 .form__input {
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
     outline: none;
     width: 100%;
-    background-color: transparent !important;
+    background-color: white !important;
     -webkit-appearance: none;
     resize: vertical;
+    transition: all 0.3s;
+}
+
+.form__input--has-error {
+    border: 1px solid #F44336 !important;
 }
 
 .form__input::placeholder {
@@ -76,7 +92,7 @@
 
 .form__label--required::after {
     content: "* påkrævet";
-    color: darkred;
+    color: #F44336;
     margin-left: 0.5rem;
     font-size: 10px;
 }
