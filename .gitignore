@@ -2,4 +2,5 @@
 /server/node_modules
 /server/uploads
 /client/node_modules
+/client/src/config.js
 /.idea
