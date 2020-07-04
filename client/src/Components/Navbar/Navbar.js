@@ -10,14 +10,9 @@ const Navbar = ({isAdmin}) => {
     const history = useHistory();
     const {user, logout} = useContext(AppContext);
 
-    const handleLogout = () => {
-        logout();
-        history.push("/auth/login");
-    };
-
     return (
         <nav className="navbar">
-            <div className="navbar__logo">{config.APP_NAME}</div>
+            <div className="navbar__logo">App</div>
             <ul className="navbar__list">
                 <AccountSubmenu/>
             </ul>

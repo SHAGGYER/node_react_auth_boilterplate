@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Link, useHistory} from "react-router-dom";
-import FormErrors from "../../Components/FormErrors/FormErrors";
 import HttpClient from "../../Services/HttpClient";
 import "./Login.css";
 import Button from "../../Components/Button/Button";
@@ -14,6 +13,7 @@ export default function Login() {
     const [generalError, setGeneralError] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const onSubmit = async event => {
         event.preventDefault();
@@ -31,10 +31,12 @@ export default function Login() {
                 password
             };
 
+            setLoading(true);
             const response = await HttpClient().post("/api/auth/login", data);
             localStorage.setItem("token", response.data.token);
             window.location = "/";
         } catch (e) {
+            setLoading(false);
             setGeneralError(e.response.data.message);
         }
     };
@@ -54,7 +56,7 @@ export default function Login() {
 
                 <div className="form__buttons">
                     <div className="form__buttons__left">
-                        <Button className="btn--primary mb-1" type="submit">Log Ind</Button>
+                        <Button loading={loading} className="btn--primary mb-1" type="submit">Log Ind</Button>
                     </div>
 
                     <div>

@@ -12,10 +12,11 @@ export default function Register() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [error, setError] = useState([]);
-
     const [password, setPassword] = useState("");
     const [passwordAgain, setPasswordAgain] = useState("");
     const [generalError, setGeneralError] = useState("");
+    const [loading, setLoading] = useState(false);
+
 
     const onSubmit = async event => {
         event.preventDefault();
@@ -37,10 +38,12 @@ export default function Register() {
                 password
             };
 
+            setLoading(true);
             const response = await HttpClient().post("/api/auth/register", data);
             localStorage.setItem("token", response.data.token);
             window.location = '/';
         } catch (e) {
+            setLoading(false);
             setGeneralError(e.response.data.message);
         }
 
@@ -68,7 +71,7 @@ export default function Register() {
                 </div>
                 <div className="form__buttons">
                     <div className="form__buttons__left">
-                        <Button className="btn--primary" type="submit">Register</Button>
+                        <Button loading={loading} className="btn--primary" type="submit">Register</Button>
                     </div>
                     <div>
                         <Link to="/auth/forgot-password">Forgot Password?</Link>

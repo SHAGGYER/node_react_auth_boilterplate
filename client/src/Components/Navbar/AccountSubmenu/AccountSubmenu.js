@@ -8,7 +8,7 @@ export default function () {
     const closedClass = "navbar__submenu-list";
     const openClass = "navbar__submenu-list navbar__submenu--active";
     const wrapperRef = useRef(null);
-    const {user, logout} = useContext(AppContext);
+    const {user, logout, setCreditsModalOpen} = useContext(AppContext);
     const [className, setClassName] = useState(closedClass);
     const handleLogout = () => {
         logout();
@@ -24,6 +24,16 @@ export default function () {
     const open = () => {
         setClassName(openClass);
     };
+
+    const handleCreditsModal = () => {
+        setCreditsModalOpen(true);
+        close();
+    }
+
+    const handleManageCards = () => {
+        history.push(`/cards`)
+        close();
+    }
 
     return (
         <li className="navbar__list-item navbar__submenu" ref={wrapperRef}>

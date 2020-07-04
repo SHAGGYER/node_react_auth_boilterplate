@@ -66,41 +66,35 @@ const App = ({location}) => {
                     installed,
                     setInstalled,
                 }}>
-                    {installed ? (
-                        <section className="flex flex--column h-100">
-                            <Navbar/>
-                            <Switch>
-                                <Route path="/auth/login">
-                                    {!user ? <Login/> : <Redirect to="/"/>}
-                                </Route>
-                                <Route path="/auth/register">
-                                    {!user ? <Register/> : <Redirect to="/"/>}
-                                </Route>
-                                <Route path="/auth/forgot-password">
-                                    <ForgotPassword/>
-                                </Route>
-                                <Route path="/auth/reset-password">
-                                    <ResetPassword/>
-                                </Route>
-                                <Route path="/errors/400">
-                                    <Error400/>
-                                </Route>
-                                <Route path="/errors/401">
-                                    <Error401/>
-                                </Route>
-                                <Route path="/errors/404">
-                                    <Error404/>
-                                </Route>
-                                <Route path="/errors/500">
-                                    <Error500/>
-                                </Route>
-                            </Switch>
-                        </section>
-                    ) : (
-                        <section>
-                            <Install/>
-                        </section>
-                    )}
+                    <section className="flex flex--column h-100">
+                        <Navbar/>
+                        <Switch>
+                            <Route path="/auth/login">
+                                {!user ? <Login/> : <Redirect to="/"/>}
+                            </Route>
+                            <Route path="/auth/register">
+                                {!user ? <Register/> : <Redirect to="/"/>}
+                            </Route>
+                            <Route path="/auth/forgot-password">
+                                <ForgotPassword/>
+                            </Route>
+                            <Route path="/auth/reset-password">
+                                <ResetPassword/>
+                            </Route>
+                            <Route path="/errors/400">
+                                <Error400/>
+                            </Route>
+                            <Route path="/errors/401">
+                                <Error401/>
+                            </Route>
+                            <Route path="/errors/404">
+                                <Error404/>
+                            </Route>
+                            <Route path="/errors/500">
+                                <Error500/>
+                            </Route>
+                        </Switch>
+                    </section>
                 </AppContext.Provider>
             )}
         </div>

@@ -2,9 +2,8 @@
     outline: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    padding: 10px 35px;
+    padding: 7px 25px;
     border-radius: 10px;
-    color: white;
     border: none;
     text-transform: uppercase;
     line-height: 2;
@@ -12,34 +11,31 @@
     text-decoration: none;
 }
 
-.btn--plain {
-    outline: none;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
-
-.btn--white {
-    background-color: white;
-}
-
 .btn--primary {
-    background-color: #eee;
-    color: black !important;
-}
-
-.btn--success {
-    background-color: #388E3C;
-    color: white !important;
-}
-
-.btn--error {
-    background-color: #F44336;
-    color: white !important;
+    background-color: var(--blue-primary);
+    color: white;
 }
 
 .btn--primary:hover {
-    background-color: #ccc;
+    background-color: var(--blue-dark);
+}
+
+.btn--success {
+    background-color: var(--green-primary);
+    color: white;
+}
+
+.btn--success:hover {
+    background-color: var(--green-dark);
+}
+
+.btn--error {
+    background-color: var(--red-primary);
+    color: white;
+}
+
+.btn--error:hover {
+    background-color: var(--red-dark);
 }
 
 .btn--small {
@@ -48,13 +44,9 @@
 }
 
 .btn:disabled {
-    background-color: #eee;
-    color: #333;
     cursor: not-allowed;
 }
 
 .btn > .fa {
-    position: absolute;
-    left: 15px;
-    top: 15px;
+    margin-right: 0.3rem;
 }

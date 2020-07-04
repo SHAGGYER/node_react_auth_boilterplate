@@ -71,6 +71,10 @@ body {
     position: relative;
 }
 
+ul {
+    margin-bottom: 0 !important;
+}
+
 #root {
     height: 100%;
 }

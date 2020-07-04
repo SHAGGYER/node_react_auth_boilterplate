@@ -1,0 +1,18 @@
+.card__element {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 100%;
+    outline: none;
+}
+
+.card__element::placeholder {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.card__column {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
