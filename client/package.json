@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "http-proxy-middleware": "^1.0.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "peer": "^0.5.2",
     "peerjs": "^1.2.0",
     "query-string": "^6.12.1",
